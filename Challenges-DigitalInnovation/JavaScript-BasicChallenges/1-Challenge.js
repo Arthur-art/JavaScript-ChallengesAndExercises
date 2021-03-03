@@ -12,3 +12,7 @@ if(line > 0){
 }
 }
 console.log(numpos + " valores positivos")
+
+
+
+
