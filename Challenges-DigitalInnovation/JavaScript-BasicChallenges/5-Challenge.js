@@ -3,7 +3,7 @@ a distância total percorrida (em Km) e o total de combustível consumido (em li
 
 
 
-let distance = parseInt(gets());
-let combustible = parseFloat(gets());
+let distance = 50;
+let combustible = 100;
 let total = parseFloat(distance / combustible).toFixed(3);
 console.log(total + " km/l");
