@@ -9,19 +9,26 @@ Em segundo lugar, imprima cada consoante (ou seja, não vogal) em em uma nova li
 
 let word = "javascript";
 
-function vowelsAndConsonants(s) {
-  let vowels = "aeiou";
-  let consonents = [];
-  for (var i = 0; i < s.length; i++) {
-    if (vowels.includes(s[i])) {
-      console.log(s[i]);
-    } else {
-      consonents.push(s[i]);
-    }
-  }
-  for (let j = 0; j < consonents.length; j++) {
-    console.log(consonents[j]);
-  }
+let vowelsAndConsonants = (word)=>{
+   let vowels = "aeiou";
+   let consonant = [];
+   let wordNumb = [];
+   for(let i in word){
+       if(vowels.includes(word[i])){
+           console.log(word[i]);
+           wordNumb.push(word[i]);
+
+    
+       }else{
+           consonant.push(word[i]);
+       }
+   }
+   for(let i=0;i<consonant.length;i++){
+       console.log(consonant[i]);
+       
+   }
+ console.log(`${consonant.length} consonant and ${wordNumb.length} vowels`)
+ 
 }
 
 vowelsAndConsonants(word);
