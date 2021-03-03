@@ -4,13 +4,14 @@
   Na sequência mostre o valor lido e a relação de notas necessárias.
   */
 
-
 let value = 1850;
-let arrayNotes = [100,50,20,10,5,2,1];
-let html = '';
-console.log(value)
-for(let i in arrayNotes){
-  html+=`${Math.floor(value/arrayNotes[i])} nota(s) de R$ ${(arrayNotes[i])},00\n`;
-  value %= arrayNotes[i];
+let notes = [100, 50, 20, 10, 5, 2, 1];
+const arrayNotes = (notes,value)=>{
+  let html = ``;
+  for(let i in notes){
+    html += `${Math.floor(value/notes[i])} notas de ${(notes[i])},00 reais \n`
+    value %= notes[i];
+  }
+  return console.log(html);
 }
-console.log(html);
+arrayNotes(notes,value);
