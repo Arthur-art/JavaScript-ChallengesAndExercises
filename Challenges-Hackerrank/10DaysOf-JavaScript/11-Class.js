@@ -12,7 +12,7 @@ class Polygon{
     }
 
     perimeter(){
-        return (this.value || []).reduce((target, item )=> target +item);
+        return (this.value || []).reduce((target, item )=> target + item);
     }
 }
 
