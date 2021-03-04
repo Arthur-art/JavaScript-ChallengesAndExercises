@@ -4,9 +4,9 @@ nums , de n números. A função deve encontrar e retornar o segundo maior núme
 
 function getSecondLargest(nums) {
  
- const numMax = Math.max(...nums);
- nums = nums.filter(value=>value!==numMax);
- return Math.max(...nums);
+ let numMax = nums.filter((value)=>value !== Math.max(...nums));
+ console.log(numMax)
+ console.log(Math.max(...numMax));
  
 }
 let nums = [1,2,3,4,5,6,7,8,9,10];
