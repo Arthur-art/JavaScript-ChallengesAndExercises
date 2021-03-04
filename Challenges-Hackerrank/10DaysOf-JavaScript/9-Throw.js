@@ -17,4 +17,12 @@ function isPositive(a){
     return result;
 }
 let a = 1;
-console.log(isPositive(a));
+//console.log(isPositive(a));
+
+function thisStudy(){
+
+    this.name="Arthur";
+    console.log(thisStudy.name);
+}
+thisStudy()
+
