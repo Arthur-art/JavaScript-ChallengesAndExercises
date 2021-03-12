@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <table>
+        <thead>
+            <tr>
+               <th>Materias</th>
+               <th>1ª Semestre</th>
+               <th>2ª Semestre</th>
+               <th>3ª Semestre</th>
+               <th>Resultados</th>
+               <th>Coloque aqui a porcentagem necessaria para passar</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Matematica</td>
+                <td><input class="matematica" min="0" max="10" type="number"></td>
+                <td><input class="matematica" min="0" max="10" type="number"></td>
+                <td><input class="matematica" min="0" max="10" type="number"></td>
+                <td id="notaMat" ></td>
+                <td><input type="text" id="porcentagem" type="number"></td>
+            </tr>
+            <tr>
+                <td>Portugues</td>
+                <td><input class="portugues" min="0" max="10" type="number"></td>
+                <td><input class="portugues" min="0" max="10" type="number"></td>
+                <td><input class="portugues" min="0" max="10" type="number"></td>
+                <td id="notaPort"></td>
+            </tr>
+            <tr>
+                <td>Fisica</td>
+                <td><input class="fisica" min="0" max="10" type="number"></td>
+                <td><input class="fisica" min="0" max="10" type="number"></td>
+                <td><input class="fisica" min="0" max="10" type="number"></td>
+                <td id="notaFis"></td>
+            </tr>
+            <tr>
+                <td>Quimica</td>
+                <td><input class="quimica" min="0" max="10" type="number"></td>
+                <td><input class="quimica" min="0" max="10" type="number"></td>
+                <td><input class="quimica" min="0" max="10" type="number"></td>
+                <td id="notaQuim"></td>
+            </tr>
+            <tr>
+                <td>Geografia</td>
+                <td><input class="geografia" min="0" max="10" type="number"></td>
+                <td><input class="geografia" min="0" max="10" type="number"></td>
+                <td><input class="geografia" min="0" max="10" type="number"></td>
+                <td id="notaGeo"></td>
+            </tr>
+            <tr>
+                <td>Inglês</td>
+                <td><input class="ingles" min="0" max="10" type="number"></td>
+                <td><input class="ingles" min="0" max="10" type="number"></td>
+                <td><input class="ingles" min="0" max="10" type="number"></td>
+                <td id="notaIngles"></td>
+            </tr>
+        </tbody>
+
+    </table>
+</form>
+    <button>Calcular</button>
+    <script src="./app.js"></script>
+</body>
+</html>
