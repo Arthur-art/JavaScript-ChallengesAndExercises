@@ -13,10 +13,10 @@ const tdresultGeo = document.getElementById("notaGeo");
 const tdresultIngles = document.getElementById("notaIngles");
 const inputAll = document.querySelectorAll("input");
 const porcentagem = document.getElementById("porcentagem");
+porcentagem.setAttribute("value", "%");
 
 const setValue = inputAll.forEach((valueNode) => {
   valueNode.setAttribute("value", "0");
-  valueNode.setAttribute("required", "");
 });
 
 const result = (mat, port, fis, quim, geo, ingles) => {
@@ -135,6 +135,25 @@ const result = (mat, port, fis, quim, geo, ingles) => {
   }
 };
 
+const calcMateria = () => {
+  let valueAllInput = [];
+  inputAll.forEach((value) => {
+    valueAllInput.push(value.value);});
+  const valueMenorZero = valueAllInput.filter((element) => {
+    return element < 0;});
+  if (valueMenorZero.length > 0) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+function call(fn) {
+  let permission = calcMateria();
+  return !!permission && fn();
+}
+
 button.addEventListener("click", () => {
-  result(mat, port, fis, quim, geo, ingles);
+  calcMateria();
+  call(() => result(mat, port, fis, quim, geo, ingles));
 });
